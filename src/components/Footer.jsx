@@ -7,7 +7,7 @@ import { faChevronCircleUp } from '@fortawesome/free-solid-svg-icons'
 const Footer = () => {
   const refFooter = useRef()
   return (
-    <div className='mt-[100px] w-[100%] h-[400px] flex flex-col'>
+    <div className='mt-[100px] w-[100%] h-[400px]  flex flex-col'>
 
       <div ref={refFooter} className='m-[20px] text-center'>
         <h2 className='text-[50px] font-[1000] text-center text-white'>Nicolas Caliari</h2>
