@@ -4,6 +4,9 @@ import proyectoIselec from "../assets/projects/iselec.png";
 import proyectoBarfer from "../assets/projects/barfer.png";
 import proyectoBarferApp from "../assets/projects/barfer_app.png";
 import proyectoConstructora from "../assets/projects/constructora.png";
+import proyectoChat from "../assets/projects/chat.png";
+import barferServer from "../assets/projects/barfer_server.png";
+import iselecServer from "../assets/projects/iselec_server.png";
 import Button from '../components/Button';
 
 const Projects = () => {
@@ -50,6 +53,31 @@ const Projects = () => {
       img: proyectoConstructora,
       category: 'frontend',
     },
+    {
+      id: 6,
+      name: 'backend barfer',
+      description: 'Backend desarrollado con Node y Express. Contiene endpoints para la app móvil de Barfer.',
+      link: '',
+      img: barferServer,
+      category: 'backend',
+    },
+    {
+      id: 7,
+      name: 'backend Iselec',
+      description: 'Backend desarrollado con Node y Express. Contiene endpoints para la tienda virtual de Iselec.',
+      link: '',
+      img: iselecServer,
+      category: 'backend',
+    },
+    {
+      id: 8,
+      name: 'backend chat',
+      description: 'Backend desarrollado con Node y Socket.io. Tiene un frontend para poder chatear en tiempo real.',
+      link: '',
+      img: proyectoChat,
+      category: 'backend',
+    },
+    
   ];
 
   const handleCategoryChange = (category) => {
@@ -80,12 +108,18 @@ const Projects = () => {
           >
             Full Stack
           </Button>
+          <Button
+            className={`mb-4 sm:mb-0 ${selectedCategory === 'backend' ? 'active' : ''}`}
+            onClick={() => handleCategoryChange('backend')}
+          >
+            Backend
+          </Button>
         </div>
 
         {filteredProjects.map((item) => (
           <div key={item.id} className="my-10">
             <div className="overflow-hidden flex justify-center">
-              <img src={item.img} alt="Software Screenshot" className="w-60 sm:w-80 block object-cover" loading="lazy" />
+              <img src={item.img} alt="Software Screenshot" className="w-40 md:w-60 block object-cover" loading="lazy" />
             </div>
             <div className="p-4 flex flex-col items-center text-center sm:text-left">
               <h3 className="font-bold text-xl sm:text-4xl text-white mb-4">

@@ -4,10 +4,9 @@ import css from "../assets/technology/CSS3.svg.png"
 import js from "../assets/technology/js.svg.png"
 import git from "../assets/technology/Git-Icon-1788C.png"
 import c from "../assets/technology/img.png"
-import boostrap from "../assets/technology/bs.png"
 import react from "../assets/technology/react.png"
-import asp from "../assets/technology/asp.png"
 import sql from "../assets/technology/sql.png"
+import node from "../assets/technology/node.png"
 import type from "../assets/technology/typescript.png"
 
 
@@ -32,6 +31,11 @@ const Skills = () => {
         },
         {
             id: 4,
+            img: node,
+            name: 'node'
+        },
+        {
+            id: 5,
             img: react,
             name: 'React'
         },
@@ -41,17 +45,17 @@ const Skills = () => {
             name: 'Git'
         },
         {
-            id: 8,
+            id: 6,
             img: sql,
             name: 'MySql'
         },
         {
-            id: 9,
+            id: 7,
             img: c,
             name: 'C#'
         },
         {
-            id: 10,
+            id: 8,
             img: type,
             name: 'Typescript'
         },
