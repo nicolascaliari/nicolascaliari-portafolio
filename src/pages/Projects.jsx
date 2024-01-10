@@ -33,7 +33,7 @@ const Projects = () => {
       id: 3,
       name: 'Barfer App Desktop',
       description: 'App de escritorio desarrollada con C# y .NET Windows Forms. Proyecto para la Universidad Tecnológica Nacional.',
-      link: '',
+      link: 'https://github.com/nicolascaliari/PrimerParcial_Nicolas_Caliari',
       img: proyectoBarfer,
       category: 'fullstack',
     },
@@ -41,7 +41,7 @@ const Projects = () => {
       id: 4,
       name: 'Barfer App Mobile',
       description: 'App móvil desarrollada con React Native, TypeScript, Node y Express. Proyecto para la empresa Barfer. Sigue en proceso.',
-      link: '',
+      link: 'https://github.com/nicolascaliari/barfer_app_typescript',
       img: proyectoBarferApp,
       category: 'fullstack',
     },
@@ -49,31 +49,31 @@ const Projects = () => {
       id: 5,
       name: 'Constructora',
       description: 'Página web desarrollada para una empresa constructora. Se utilizó React Vite y Tailwind CSS.',
-      link: '',
+      link: 'https://horneroconstrucciones.com.ar/',
       img: proyectoConstructora,
       category: 'frontend',
     },
     {
       id: 6,
       name: 'backend barfer',
-      description: 'Backend desarrollado con Node y Express. Contiene endpoints para la app móvil de Barfer.',
-      link: '',
+      description: 'Backend desarrollado con Express y MySQL. API REST para la app móvil de Barfer.',
+      link: 'https://github.com/nicolascaliari/backend-barfer',
       img: barferServer,
       category: 'backend',
     },
     {
       id: 7,
       name: 'backend Iselec',
-      description: 'Backend desarrollado con Node y Express. Contiene endpoints para la tienda virtual de Iselec.',
-      link: '',
+      description: 'Backend desarrollado con NestJs y MongoDB. API REST para la tienda virtual de Iselec.',
+      link: 'https://github.com/nicolascaliari/iselec-backend',
       img: iselecServer,
       category: 'backend',
     },
     {
       id: 8,
-      name: 'backend chat',
-      description: 'Backend desarrollado con Node y Socket.io. Tiene un frontend para poder chatear en tiempo real.',
-      link: '',
+      name: 'backend blog',
+      description: 'Backend desarrollado con Nestjs para el bootcamp de codigofacilito.',
+      link: 'https://github.com/nicolascaliari/blog-backend',
       img: proyectoChat,
       category: 'backend',
     },
@@ -128,14 +128,8 @@ const Projects = () => {
               <p className="text-base sm:text-xl text-white font-semibold mb-4">
                 {item.description}
               </p>
-              <Button
-                href={item.link}
-                className="btn btn--med btn--theme dynamicBgClr"
-                target="_blank"
-                rel="noreferrer"
-              >
-                Ver página
-              </Button>
+
+              <a className="btn btn--med btn--theme dynamicBgClr button" target='_blank' href={item.link}>Ver pagina</a>
             </div>
           </div>
         ))}

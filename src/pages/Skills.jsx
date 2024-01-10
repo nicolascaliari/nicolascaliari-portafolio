@@ -1,13 +1,12 @@
 import React from 'react'
-import html from "../assets/technology/html.png"
-import css from "../assets/technology/CSS3.svg.png"
-import js from "../assets/technology/js.svg.png"
+import nest from "../assets/technology/nest.png"
+import js from "../assets/technology/js.png"
 import git from "../assets/technology/Git-Icon-1788C.png"
-import c from "../assets/technology/img.png"
-import react from "../assets/technology/react.png"
+import java from "../assets/technology/java.png"
+import mongo from "../assets/technology/mongo.png"
 import sql from "../assets/technology/sql.png"
 import node from "../assets/technology/node.png"
-import type from "../assets/technology/typescript.png"
+import type from "../assets/technology/ts.png"
 
 
 const Skills = () => {
@@ -16,48 +15,43 @@ const Skills = () => {
     const SKILLS = [
         {
             id: 1,
-            img: html,
-            name: 'HTML'
-        },
-        {
-            id: 2,
-            img: css,
-            name: 'CSS'
-        },
-        {
-            id: 3,
             img: js,
             name: 'Javascript'
         },
         {
-            id: 4,
+            id: 2,
+            img: type,
+            name: 'Typescript'
+        },
+        {
+            id: 3,
             img: node,
-            name: 'node'
+            name: 'NodeJs'
         },
         {
-            id: 5,
-            img: react,
-            name: 'React'
+            id: 4,
+            img: nest,
+            name: 'NestJs'
         },
+        // {
+        //     id: 5,
+        //     img: java,
+        //     name: 'Java'
+        // },
         {
-            id: 5,
+            id: 6,
             img: git,
             name: 'Git'
         },
         {
-            id: 6,
+            id: 7,
             img: sql,
             name: 'MySql'
         },
         {
-            id: 7,
-            img: c,
-            name: 'C#'
-        },
-        {
             id: 8,
-            img: type,
-            name: 'Typescript'
+            img: mongo,
+            name: 'MongoDB'
         },
 
     ]
@@ -75,7 +69,6 @@ const Skills = () => {
                         SKILLS.map((skill) => (
                             <div className="flex flex-col justify-center items-center p-[2rem]  font-[600] text-white" key={skill.id}>
                                 <img className="w-[130px] flex justify-center items-center" src={skill.img} alt='' />
-                                <h2 className='text-center'>{skill.name}</h2>
                             </div>
                         ))
                     }

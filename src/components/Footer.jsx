@@ -27,17 +27,17 @@ const Footer = () => {
 
       <div className='flex flex-row m-auto bg-transparent'>
         <a
-          href="https://www.linkedin.com/in/nicolas-caliari-628236236/" className='bg-transparent decoration-none cursor-pointer'>
+          href="https://www.linkedin.com/in/nicolas-caliari-628236236/" target='_blank' className='bg-transparent decoration-none cursor-pointer'>
           <i><FontAwesomeIcon className='p-[30px] text-[40px] text-white' icon={faLinkedin} /> </i>
         </a>
 
 
-        <a href="https://www.instagram.com/nicolascaliari/" className='bg-transparent decoration-none cursor-pointer' >
+        <a href="https://www.instagram.com/nicolascaliari/" target='_blank' className='bg-transparent decoration-none cursor-pointer' >
           <i>  <FontAwesomeIcon className='p-[30px] text-[40px] text-white' icon={faInstagram} /> </i></a>
 
 
 
-        <a href="https://github.com/nicolascaliari" className='bg-transparent decoration-none cursor-pointer'>
+        <a href="https://github.com/nicolascaliari" target='_blank' className='bg-transparent decoration-none cursor-pointer'>
           <i>  <FontAwesomeIcon className='p-[30px] text-[40px] text-white' icon={faGithub} /> </i></a>
       </div>
 

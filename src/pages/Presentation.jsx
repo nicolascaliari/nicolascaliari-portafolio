@@ -3,8 +3,22 @@ import yo from "../assets/me/yo.jpg";
 import Button from '../components/Button';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronCircleDown } from '@fortawesome/free-solid-svg-icons';
+import pdfUrl from '../assets/cv.pdf';
+
 
 const Presentation = () => {
+
+  const handleDownload = () => {
+    const link = document.createElement('a');
+    link.href = pdfUrl;
+    link.target = '_blank';
+    link.download = 'NICOLAS_CALIARI.pdf';
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
+
+
   return (
     <section className='flex flex-col justify-center items-center h-[90vh]' id='inicio'>
 
@@ -22,7 +36,8 @@ const Presentation = () => {
             Nicolas Caliari
           </h1>
           <div className='flex items-center justify-center mt-[30px]'>
-            <Button>Descargar cv</Button>
+            <button className='button' onClick={handleDownload}>Descargar PDF</button>
+            {/* <Button>Descargar cv</Button> */}
             <a className='flecha text-center ml-[20px]' href='#proyectos'>
               <FontAwesomeIcon icon={faChevronCircleDown} />
             </a>
