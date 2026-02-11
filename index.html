@@ -1,24 +1,435 @@
-<!doctype html>
-<html lang="en">
+<!DOCTYPE html>
+<html class="light" lang="es">
 
 <head>
-  <meta charset="UTF-8" />
-  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous"> -->
-
-  <title>Vite + React</title>
-
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Nicolas Caliari | Desarrollador Web</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#ec1337",
+                        "background-light": "#fcfcfc",
+                        "background-dark": "#1a0b0d",
+                        "slate-custom": "#475569",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"],
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.375rem",
+                        "lg": "0.5rem",
+                        "xl": "1rem",
+                        "2xl": "1.5rem",
+                        "3xl": "2rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+    <style type="text/tailwindcss">
+        body { font-family: 'Inter', sans-serif; }
+        .hero-pattern {
+            background-color: #fcfcfc;
+            background-image: radial-gradient(#ec1337 0.5px, transparent 0.5px);
+            background-size: 32px 32px;
+            opacity: 1;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .avatar-glow {
+            box-shadow: 0 0 40px -10px rgba(236, 19, 55, 0.3);
+        }
+    </style>
 </head>
 
-<body>
-  <div id="root"></div>
-  <script type="module" src="/src/main.jsx"></script>
-  <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
-    crossorigin="anonymous"></script> -->
-    <script src="https://kit.fontawesome.com/d466b0ce19.js" crossorigin="anonymous"></script>
+<body
+    class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 font-display transition-colors duration-300">
+    <nav
+        class="sticky top-0 z-50 bg-white/90 dark:bg-background-dark/90 backdrop-blur-md border-b border-slate-100 dark:border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <div class="flex items-center gap-3">
+                    <div
+                        class="w-10 h-10 bg-primary rounded-full flex items-center justify-center shadow-lg shadow-primary/20">
+                        <span class="text-white font-black text-lg">NC</span>
+                    </div>
+                    <span class="font-extrabold text-xl tracking-tight">nicolas<span
+                            class="text-primary">caliari</span></span>
+                </div>
+                <div class="hidden md:flex items-center space-x-10">
+                    <a class="text-sm font-semibold text-slate-600 dark:text-slate-300 hover:text-primary transition-colors"
+                        href="#solutions">Proyectos</a>
+                    <a class="text-sm font-semibold text-slate-600 dark:text-slate-300 hover:text-primary transition-colors"
+                        href="#process">Mi Enfoque</a>
+                    <a class="text-sm font-semibold text-slate-600 dark:text-slate-300 hover:text-primary transition-colors"
+                        href="#about">Sobre Mí</a>
+                    <a class="bg-primary text-white px-6 py-3 rounded-xl text-sm font-bold hover:bg-primary/90 transition-all shadow-lg shadow-primary/20 flex items-center gap-2"
+                        href="#about">
+                        Hablemos
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <header class="relative overflow-hidden py-20 lg:py-32 hero-pattern">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="flex flex-col lg:flex-row items-center gap-16">
+                <div class="flex-1 text-center lg:text-left">
+                    <h1 class="text-5xl lg:text-7xl font-black text-slate-900 dark:text-white leading-tight mb-8">
+                        Ayudo a tu <span
+                            class="text-primary text-transparent bg-clip-text bg-gradient-to-r from-primary to-red-400">empresa
+                            a crecer</span> con soluciones web a medida.
+                    </h1>
+                    <p
+                        class="text-xl text-slate-600 dark:text-slate-400 mb-10 max-w-2xl leading-relaxed mx-auto lg:mx-0">
+                        Soy Nicolas Caliari, desarrollador especializado en ayudar a empresas a transformar desafíos
+                        complejos en herramientas digitales eficientes que impulsan el crecimiento.
+                    </p>
+                    <div class="flex flex-wrap gap-4 justify-center lg:justify-start">
+                        <a href="#solutions"
+                            class="bg-primary text-white px-8 py-4 rounded-xl font-bold hover:shadow-xl hover:shadow-primary/30 transition-all flex items-center gap-2">
+                            Ver mis Proyectos
+                            <span class="material-symbols-outlined text-sm">arrow_downward</span>
+                        </a>
+                        <a href="https://wa.me/36705433645?text=Hola%20Nicolas,%20vi%20tu%20web%20y%20me%20gustaria%20agendar%20una%20llamada%20para%20hablar%20de%20mi%20proyecto."
+                            target="_blank"
+                            class="bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 px-8 py-4 rounded-xl font-bold text-slate-700 dark:text-slate-200 hover:bg-slate-50 transition-all inline-block">
+                            Agendar una charla
+                        </a>
+                    </div>
+                </div>
+                <div class="flex-1 relative">
+                    <div class="relative w-72 h-72 lg:w-96 lg:h-96 mx-auto">
+                        <div class="absolute inset-0 bg-primary/10 rounded-3xl rotate-6"></div>
+                        <div
+                            class="absolute inset-0 bg-white dark:bg-slate-800 border-2 border-slate-100 dark:border-slate-700 rounded-3xl -rotate-3 transition-transform hover:rotate-0 duration-500 overflow-hidden avatar-glow">
+                            <img alt="Nicolas Caliari - Consultor de Desarrollo de Software"
+                                class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700"
+                                src="./public/foto.png" />
+                            <div
+                                class="absolute bottom-0 inset-x-0 p-4 bg-gradient-to-t from-slate-900/80 to-transparent">
+                                <p class="text-white text-xs font-bold uppercase tracking-widest">Software Developer</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24" id="solutions">
+        <div class="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
+            <div class="max-w-2xl">
+                <h2 class="text-4xl font-black mb-4">Resultados que impulsan tu negocio</h2>
+                <p class="text-lg text-slate-500 dark:text-slate-400">Resultados reales aplicados a retail, finanzas y
+                    sectores empresariales.</p>
+            </div>
+            <div class="flex gap-2 bg-slate-100 dark:bg-slate-800 p-1.5 rounded-xl">
+                <button
+                    class="px-5 py-2.5 rounded-lg bg-white dark:bg-slate-700 shadow-sm text-sm font-bold text-slate-900 dark:text-white">Todo</button>
+                <button
+                    class="px-5 py-2.5 rounded-lg text-sm font-bold text-slate-500 hover:text-primary transition-colors">E-commerce</button>
+                <button
+                    class="px-5 py-2.5 rounded-lg text-sm font-bold text-slate-500 hover:text-primary transition-colors">Gestión</button>
+                <button
+                    class="px-5 py-2.5 rounded-lg text-sm font-bold text-slate-500 hover:text-primary transition-colors">Corporativo</button>
+            </div>
+        </div>
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-10">
+
+
+
+            <div
+                class="group bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-3xl overflow-hidden hover:border-primary/30 transition-all duration-500 shadow-sm hover:shadow-2xl">
+                <div class="flex flex-col h-full">
+                    <div class="h-64 bg-slate-100 dark:bg-slate-800 relative overflow-hidden">
+                        <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuApxkJ6arowmVwgu70thVA_bLUCTOtqS5fofg4Ui_6lzjBrR_agYKrNS-Z4DrMaT11CM4S0iyi2A1U67fWsKRVW1MitYu0rtgfSRVxR-EoRZgMUNvbB-FOAlMr7AEwa3NVynQAmTtyFHdiFvjLswSojHN4_s8boJRfUQKB4u-fiZ18pABh8-E8ZqNljrzBrlUT_5YHa_c9VW5DRFCW-W6XhQn9wDO3UaIQBwbf6gkrT4c5ZS6qL75oo-Ise6VwkVNBtsqjHLJ4TjU8" />
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+                        <div class="absolute bottom-6 left-8">
+                            <span
+                                class="bg-primary text-white text-[10px] font-bold uppercase tracking-[0.2em] px-3 py-1.5 rounded-full mb-3 inline-block">Barfer
+                                alimentos</span>
+                            <h3 class="text-3xl font-bold text-white">e-commerce barfer</h3>
+                        </div>
+                    </div>
+                    <div class="p-8 flex-1 flex flex-col">
+                        <p class="text-slate-600 dark:text-slate-400 text-base leading-relaxed mb-8">
+                            Ayudé a una empresa regional a crear su e-commerce de alimentos. Integré un gestor de
+                            pedidos y envíos para optimizar su proceso de ventas.
+
+                        </p>
+                        <div
+                            class="mt-auto pt-6 border-t border-slate-100 dark:border-slate-800 flex items-center justify-between">
+                            <a href="https://www.barferalimento.com/" target="_blank"
+                                class="text-primary hover:text-red-700 font-bold flex items-center gap-2 group/btn">
+                                Ver Detalles
+                                <span
+                                    class="material-symbols-outlined text-lg transition-transform group-hover/btn:translate-x-1">
+                                    arrow_forward
+                                </span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+            <div
+                class="group bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-3xl overflow-hidden hover:border-primary/30 transition-all duration-500 shadow-sm hover:shadow-2xl">
+                <div class="flex flex-col h-full">
+                    <div class="h-64 bg-slate-100 dark:bg-slate-800 relative overflow-hidden">
+                        <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuApxkJ6arowmVwgu70thVA_bLUCTOtqS5fofg4Ui_6lzjBrR_agYKrNS-Z4DrMaT11CM4S0iyi2A1U67fWsKRVW1MitYu0rtgfSRVxR-EoRZgMUNvbB-FOAlMr7AEwa3NVynQAmTtyFHdiFvjLswSojHN4_s8boJRfUQKB4u-fiZ18pABh8-E8ZqNljrzBrlUT_5YHa_c9VW5DRFCW-W6XhQn9wDO3UaIQBwbf6gkrT4c5ZS6qL75oo-Ise6VwkVNBtsqjHLJ4TjU8" />
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+                        <div class="absolute bottom-6 left-8">
+                            <span
+                                class="bg-primary text-white text-[10px] font-bold uppercase tracking-[0.2em] px-3 py-1.5 rounded-full mb-3 inline-block">Raw
+                                & fun</span>
+                            <h3 class="text-3xl font-bold text-white">e-commerce y gestor raw</h3>
+                        </div>
+                    </div>
+                    <div class="p-8 flex-1 flex flex-col">
+                        <p class="text-slate-600 dark:text-slate-400 text-base leading-relaxed mb-8">
+                            Ayudé a una empresa regional a crear su e-commerce de alimentos. Integré un gestor de
+                            pedidos, clientes, productos y envíos para optimizar su proceso de ventas.
+                        </p>
+                        <div
+                            class="mt-auto pt-6 border-t border-slate-100 dark:border-slate-800 flex items-center justify-between">
+                            <a href="https://raw-app-orcin.vercel.app/es" target="_blank"
+                                class="text-primary hover:text-red-700 font-bold flex items-center gap-2 group/btn">
+                                Ver Detalles
+                                <span
+                                    class="material-symbols-outlined text-lg transition-transform group-hover/btn:translate-x-1">
+                                    arrow_forward
+                                </span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+
+            <div
+                class="group bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-3xl overflow-hidden hover:border-primary/30 transition-all duration-500 shadow-sm hover:shadow-2xl">
+                <div class="flex flex-col h-full">
+                    <div class="h-64 bg-slate-100 dark:bg-slate-800 relative overflow-hidden">
+                        <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuApxkJ6arowmVwgu70thVA_bLUCTOtqS5fofg4Ui_6lzjBrR_agYKrNS-Z4DrMaT11CM4S0iyi2A1U67fWsKRVW1MitYu0rtgfSRVxR-EoRZgMUNvbB-FOAlMr7AEwa3NVynQAmTtyFHdiFvjLswSojHN4_s8boJRfUQKB4u-fiZ18pABh8-E8ZqNljrzBrlUT_5YHa_c9VW5DRFCW-W6XhQn9wDO3UaIQBwbf6gkrT4c5ZS6qL75oo-Ise6VwkVNBtsqjHLJ4TjU8" />
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+                        <div class="absolute bottom-6 left-8">
+                            <span
+                                class="bg-primary text-white text-[10px] font-bold uppercase tracking-[0.2em] px-3 py-1.5 rounded-full mb-3 inline-block">Milena
+                                makeup</span>
+                            <h3 class="text-3xl font-bold text-white">portfolio profesional</h3>
+                        </div>
+                    </div>
+                    <div class="p-8 flex-1 flex flex-col">
+                        <p class="text-slate-600 dark:text-slate-400 text-base leading-relaxed mb-8">
+                            Ayudé a una profesional a crear su portfolio profesional. Mostré un diseño moderno y
+                            funcional para que pueda mostrar sus trabajos y contactar con sus clientes.
+                        </p>
+                        <div
+                            class="mt-auto pt-6 border-t border-slate-100 dark:border-slate-800 flex items-center justify-between">
+                            <a href="https://milu28.netlify.app/" target="_blank"
+                                class="text-primary hover:text-red-700 font-bold flex items-center gap-2 group/btn">
+                                Ver Detalles
+                                <span
+                                    class="material-symbols-outlined text-lg transition-transform group-hover/btn:translate-x-1">
+                                    arrow_forward
+                                </span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div
+                class="group bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-3xl overflow-hidden hover:border-primary/30 transition-all duration-500 shadow-sm hover:shadow-2xl">
+                <div class="flex flex-col h-full">
+                    <div class="h-64 bg-slate-100 dark:bg-slate-800 relative overflow-hidden">
+                        <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuDoSgDfEAOp3y37QwtCFuZc-xhOE1T4uKiWUKX6xPZExBLHiy1vBmWYvBHq3rN4ezMegupYay7-hkOodaup-b-0gZ5AtywE_geaElHM61DoGM9_JErK_ZITPF1PJVu6l1kHiIVf_Sz4HCbT4ng1kS0tiHLfSVwDKh_SbUGdFkMKJq273Y3B6vwNWY6VIkHn69tpsGIHalqhBjllQTB7IUkfBxADoorNcXjFFRGDOoUFJhka6QQbsR1nvpJ2BeS6AOkXKCdo6kRzrjw" />
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+                        <div class="absolute bottom-6 left-8">
+                            <span
+                                class="bg-primary text-white text-[10px] font-bold uppercase tracking-[0.2em] px-3 py-1.5 rounded-full mb-3 inline-block">Gestión
+                                de Negocios</span>
+                            <h3 class="text-3xl font-bold text-white">Gestor de negocio</h3>
+                        </div>
+                    </div>
+                    <div class="p-8 flex-1 flex flex-col">
+                        <p class="text-slate-600 dark:text-slate-400 text-base leading-relaxed mb-8">
+                            Realicé un gestor de negocio para una empresa regional. Integré un panel de control para la
+                            gestión de clientes, productos, pedidos y envíos. Ademas integramos un panel de estadisticas
+                            para la toma de decisiones.
+                        </p>
+                        <div
+                            class="mt-auto pt-6 border-t border-slate-100 dark:border-slate-800 flex items-center justify-between">
+                            <a href="https://miproyecto.com" target="_blank"
+                                class="text-primary hover:text-red-700 font-bold flex items-center gap-2 group/btn">
+                                Ver Detalles
+                                <span
+                                    class="material-symbols-outlined text-lg transition-transform group-hover/btn:translate-x-1">
+                                    arrow_forward
+                                </span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <section class="bg-slate-50 dark:bg-slate-900/50 py-24 border-y border-slate-200 dark:border-slate-800"
+        id="process">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-black mb-4">Un compromiso personal con tu éxito</h2>
+                <p class="text-lg text-slate-500">Trabajo como tu partner tecnológico, no como un simple proveedor.</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-12 text-center md:text-left">
+                <div class="space-y-4">
+                    <div class="w-14 h-14 bg-primary/10 rounded-2xl flex items-center justify-center mx-auto md:mx-0">
+                        <span class="material-symbols-outlined text-primary text-3xl">handshake</span>
+                    </div>
+                    <h3 class="text-xl font-bold">Socio Directo</h3>
+                    <p class="text-slate-500 text-sm leading-relaxed">Sin intermediarios. Trabajás directamente conmigo
+                        para asegurar que tu visión se traduzca perfectamente en código.</p>
+                </div>
+                <div class="space-y-4">
+                    <div class="w-14 h-14 bg-primary/10 rounded-2xl flex items-center justify-center mx-auto md:mx-0">
+                        <span class="material-symbols-outlined text-primary text-3xl">query_stats</span>
+                    </div>
+                    <h3 class="text-xl font-bold">Enfoque Pro-Negocio</h3>
+                    <p class="text-slate-500 text-sm leading-relaxed">Priorizo el ROI y la eficiencia operativa. No solo
+                        construyo funcionalidades; diseño herramientas que te ayudan a ahorrar tiempo y dinero.</p>
+                </div>
+                <div class="space-y-4">
+                    <div class="w-14 h-14 bg-primary/10 rounded-2xl flex items-center justify-center mx-auto md:mx-0">
+                        <span class="material-symbols-outlined text-primary text-3xl">verified</span>
+                    </div>
+                    <h3 class="text-xl font-bold">Confiabilidad de por vida</h3>
+                    <p class="text-slate-500 text-sm leading-relaxed">Respaldo todo lo que construyo. Tendrás mi
+                        contacto directo para mantenimiento y soporte continuo mucho después del lanzamiento.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+    <section id="about" class="py-24 bg-white dark:bg-background-dark border-t border-slate-100 dark:border-slate-800">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-black mb-4">Sobre mí</h2>
+                <p class="text-lg text-slate-500 dark:text-slate-400">
+                    Más que código, construyo soluciones que generan impacto real.
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+
+                <!-- Texto -->
+                <div class="space-y-6 text-slate-600 dark:text-slate-400 leading-relaxed">
+                    <p>
+                        Soy <strong class="text-slate-900 dark:text-white">Nicolas Caliari</strong>, desarrollador
+                        backend y consultor tecnológico.
+                        Trabajo ayudando a empresas a optimizar procesos, automatizar operaciones y escalar sus
+                        productos digitales.
+                    </p>
+
+                    <p>
+                        Me especializo en arquitecturas modernas, APIs robustas y sistemas pensados para crecer.
+                        No solo escribo código: analizo el negocio y diseño soluciones que realmente aporten valor.
+                    </p>
+
+                    <p>
+                        Mi enfoque combina visión estratégica + ejecución técnica.
+                        Cada proyecto lo tomo como si fuera propio.
+                    </p>
+
+                    <a href="https://wa.me/36705433645?text=Hola%20Nicolas,%20quiero%20hablar%20sobre%20mi%20proyecto."
+                        target="_blank"
+                        class="inline-block mt-4 bg-primary text-white px-6 py-3 rounded-xl font-bold hover:shadow-lg transition-all">
+                        Hablemos de tu proyecto
+                    </a>
+                </div>
+
+                <!-- Card destacada -->
+                <div
+                    class="bg-slate-50 dark:bg-slate-900 p-8 rounded-3xl border border-slate-100 dark:border-slate-800 shadow-sm">
+                    <h3 class="text-xl font-bold mb-6">Especialidades</h3>
+
+                    <ul class="space-y-4 text-sm text-slate-600 dark:text-slate-400">
+                        <li>✔ Desarrollo Backend (Node.js, NestJS, NextJS, APIs REST, Microservicios)</li>
+                        <li>✔ Arquitectura escalable y optimización de sistemas</li>
+                        <li>✔ Automatización de procesos empresariales</li>
+                        <li>✔ Integraciones con terceros</li>
+                        <li>✔ Consultoría tecnológica estratégica</li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-white dark:bg-background-dark py-16 border-t border-slate-100 dark:border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row justify-between items-center gap-12">
+                <div class="text-center md:text-left">
+                    <div class="flex items-center justify-center md:justify-start gap-3 mb-6">
+                        <div class="w-8 h-8 bg-primary rounded-full flex items-center justify-center">
+                            <span class="text-white font-black text-sm">NC</span>
+                        </div>
+                        <span class="font-extrabold text-xl tracking-tight">nicolas<span
+                                class="text-primary">caliari</span></span>
+                    </div>
+                    <p class="text-slate-500 dark:text-slate-400 max-w-sm">Creando herramientas web profesionales para
+                        empresas que valoran el trabajo experto y un servicio personalizado.</p>
+                </div>
+                <div class="flex flex-col sm:flex-row items-center gap-8">
+                    <div class="flex gap-8">
+                        <a class="text-slate-400 hover:text-primary transition-colors font-bold text-sm"
+                            href="https://www.linkedin.com/in/nicolas-caliari-628236236/" target="_blank">LinkedIn</a>
+                        <a class="text-slate-400 hover:text-primary transition-colors font-bold text-sm"
+                            href="https://github.com/nicolascaliari" target="_blank">GitHub</a>
+
+                        <a class="text-slate-400 hover:text-primary transition-colors font-bold text-sm"
+                            href="https://wa.me/36705433645?text=Hola%20Nicolas,%20quiero%20agendar%20una%20llamada%20para%20hablar%20de%20mi%20proyecto."
+                            target="_blank">Agendar Llamada</a>
+                    </div>
+                    <button
+                        class="bg-slate-900 dark:bg-white text-white dark:text-slate-900 px-8 py-3 rounded-xl font-bold hover:scale-105 transition-all">Empezar
+                        un Proyecto</button>
+                </div>
+            </div>
+            <div
+                class="mt-16 pt-8 border-t border-slate-100 dark:border-slate-800 text-center text-xs text-slate-400 font-medium">
+                © 2025 Nicolas Caliari. Consultor Independiente &amp; Desarrollador de Software.
+            </div>
+        </div>
+    </footer>
+
 </body>
 
 </html>
