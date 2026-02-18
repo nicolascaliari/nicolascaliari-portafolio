@@ -53,13 +53,96 @@
         .avatar-glow {
             box-shadow: 0 0 40px -10px rgba(236, 19, 55, 0.3);
         }
+
+        /* Scroll reveal animations */
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(40px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        @keyframes fadeInLeft {
+            from { opacity: 0; transform: translateX(-40px); }
+            to { opacity: 1; transform: translateX(0); }
+        }
+        @keyframes fadeInRight {
+            from { opacity: 0; transform: translateX(40px); }
+            to { opacity: 1; transform: translateX(0); }
+        }
+        @keyframes scaleIn {
+            from { opacity: 0; transform: scale(0.9); }
+            to { opacity: 1; transform: scale(1); }
+        }
+        @keyframes slideDown {
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .reveal {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .reveal.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .reveal-left {
+            opacity: 0;
+            transform: translateX(-40px);
+            transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .reveal-left.visible {
+            opacity: 1;
+            transform: translateX(0);
+        }
+        .reveal-right {
+            opacity: 0;
+            transform: translateX(40px);
+            transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .reveal-right.visible {
+            opacity: 1;
+            transform: translateX(0);
+        }
+        .reveal-scale {
+            opacity: 0;
+            transform: scale(0.9);
+            transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .reveal-scale.visible {
+            opacity: 1;
+            transform: scale(1);
+        }
+
+        /* Hero load animations */
+        .hero-animate {
+            animation: fadeInUp 1s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+            opacity: 0;
+        }
+        .hero-animate-delay-1 { animation-delay: 0.15s; }
+        .hero-animate-delay-2 { animation-delay: 0.3s; }
+        .hero-animate-delay-3 { animation-delay: 0.45s; }
+
+        .hero-photo {
+            animation: scaleIn 1.2s cubic-bezier(0.16, 1, 0.3, 1) 0.3s forwards;
+            opacity: 0;
+        }
+
+        .nav-animate {
+            animation: slideDown 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+        }
+
+        /* Stagger delays for scroll reveals */
+        .delay-100 { transition-delay: 0.1s; }
+        .delay-200 { transition-delay: 0.2s; }
+        .delay-300 { transition-delay: 0.3s; }
+        .delay-400 { transition-delay: 0.4s; }
     </style>
 </head>
 
 <body
     class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 font-display transition-colors duration-300">
     <nav
-        class="sticky top-0 z-50 bg-white/90 dark:bg-background-dark/90 backdrop-blur-md border-b border-slate-100 dark:border-slate-800">
+        class="nav-animate sticky top-0 z-50 bg-white/90 dark:bg-background-dark/90 backdrop-blur-md border-b border-slate-100 dark:border-slate-800">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center h-20">
                 <div class="flex items-center gap-3">
@@ -89,17 +172,17 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <div class="flex flex-col lg:flex-row items-center gap-16">
                 <div class="flex-1 text-center lg:text-left">
-                    <h1 class="text-5xl lg:text-7xl font-black text-slate-900 dark:text-white leading-tight mb-8">
+                    <h1 class="hero-animate text-5xl lg:text-7xl font-black text-slate-900 dark:text-white leading-tight mb-8">
                         Ayudo a tu <span
                             class="text-primary text-transparent bg-clip-text bg-gradient-to-r from-primary to-red-400">empresa
                             a crecer</span> con soluciones web a medida.
                     </h1>
                     <p
-                        class="text-xl text-slate-600 dark:text-slate-400 mb-10 max-w-2xl leading-relaxed mx-auto lg:mx-0">
+                        class="hero-animate hero-animate-delay-1 text-xl text-slate-600 dark:text-slate-400 mb-10 max-w-2xl leading-relaxed mx-auto lg:mx-0">
                         Soy Nicolas Caliari, desarrollador especializado en ayudar a empresas a transformar desafíos
                         complejos en herramientas digitales eficientes que impulsan el crecimiento.
                     </p>
-                    <div class="flex flex-wrap gap-4 justify-center lg:justify-start">
+                    <div class="hero-animate hero-animate-delay-2 flex flex-wrap gap-4 justify-center lg:justify-start">
                         <a href="#solutions"
                             class="bg-primary text-white px-8 py-4 rounded-xl font-bold hover:shadow-xl hover:shadow-primary/30 transition-all flex items-center gap-2">
                             Ver mis Proyectos
@@ -113,7 +196,7 @@
                     </div>
                 </div>
                 <div class="flex-1 relative">
-                    <div class="relative w-72 h-72 lg:w-96 lg:h-96 mx-auto">
+                    <div class="hero-photo relative w-72 h-72 lg:w-96 lg:h-96 mx-auto">
                         <div class="absolute inset-0 bg-primary/10 rounded-3xl rotate-6"></div>
                         <div
                             class="absolute inset-0 bg-white dark:bg-slate-800 border-2 border-slate-100 dark:border-slate-700 rounded-3xl -rotate-3 transition-transform hover:rotate-0 duration-500 overflow-hidden avatar-glow">
@@ -139,7 +222,7 @@
         class="py-24 bg-white dark:bg-background-dark border-b border-slate-100 dark:border-slate-800">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
-            <div class="text-center mb-20">
+            <div class="reveal text-center mb-20">
                 <h2 class="text-4xl font-black mb-4">Servicios</h2>
                 <p class="text-lg text-slate-500 dark:text-slate-400 max-w-2xl mx-auto">
                     Desarrollo soluciones digitales adaptadas a las necesidades reales de cada negocio.
@@ -151,7 +234,7 @@
 
                 <!-- Aplicaciones Web -->
                 <div
-                    class="bg-slate-50 dark:bg-slate-900 p-8 rounded-3xl border border-slate-100 dark:border-slate-800 hover:shadow-xl transition-all">
+                    class="reveal delay-100 bg-slate-50 dark:bg-slate-900 p-8 rounded-3xl border border-slate-100 dark:border-slate-800 hover:shadow-xl transition-all">
                     <div class="w-14 h-14 bg-primary/10 rounded-2xl flex items-center justify-center mb-6">
                         <span class="material-symbols-outlined text-primary text-3xl">language</span>
                     </div>
@@ -164,7 +247,7 @@
 
                 <!-- Aplicaciones Móviles -->
                 <div
-                    class="bg-slate-50 dark:bg-slate-900 p-8 rounded-3xl border border-slate-100 dark:border-slate-800 hover:shadow-xl transition-all">
+                    class="reveal delay-200 bg-slate-50 dark:bg-slate-900 p-8 rounded-3xl border border-slate-100 dark:border-slate-800 hover:shadow-xl transition-all">
                     <div class="w-14 h-14 bg-primary/10 rounded-2xl flex items-center justify-center mb-6">
                         <span class="material-symbols-outlined text-primary text-3xl">smartphone</span>
                     </div>
@@ -177,7 +260,7 @@
 
                 <!-- Software de Escritorio -->
                 <div
-                    class="bg-slate-50 dark:bg-slate-900 p-8 rounded-3xl border border-slate-100 dark:border-slate-800 hover:shadow-xl transition-all">
+                    class="reveal delay-300 bg-slate-50 dark:bg-slate-900 p-8 rounded-3xl border border-slate-100 dark:border-slate-800 hover:shadow-xl transition-all">
                     <div class="w-14 h-14 bg-primary/10 rounded-2xl flex items-center justify-center mb-6">
                         <span class="material-symbols-outlined text-primary text-3xl">desktop_windows</span>
                     </div>
@@ -190,7 +273,7 @@
 
                 <!-- Sistemas a Medida -->
                 <div
-                    class="bg-slate-50 dark:bg-slate-900 p-8 rounded-3xl border border-slate-100 dark:border-slate-800 hover:shadow-xl transition-all">
+                    class="reveal delay-400 bg-slate-50 dark:bg-slate-900 p-8 rounded-3xl border border-slate-100 dark:border-slate-800 hover:shadow-xl transition-all">
                     <div class="w-14 h-14 bg-primary/10 rounded-2xl flex items-center justify-center mb-6">
                         <span class="material-symbols-outlined text-primary text-3xl">build</span>
                     </div>
@@ -210,7 +293,7 @@
 
     <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24" id="solutions">
         <div class="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
-            <div class="max-w-2xl">
+            <div class="reveal max-w-2xl">
                 <h2 class="text-4xl font-black mb-4">Resultados que impulsan tu negocio</h2>
                 <p class="text-lg text-slate-500 dark:text-slate-400">Resultados reales aplicados a retail, finanzas y
                     sectores empresariales.</p>
@@ -231,7 +314,7 @@
 
 
             <div
-                class="group bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-3xl overflow-hidden hover:border-primary/30 transition-all duration-500 shadow-sm hover:shadow-2xl">
+                class="reveal-left group bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-3xl overflow-hidden hover:border-primary/30 transition-all duration-500 shadow-sm hover:shadow-2xl">
                 <div class="flex flex-col h-full">
                     <div class="h-64 bg-slate-100 dark:bg-slate-800 relative overflow-hidden">
                         <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
@@ -269,7 +352,7 @@
 
 
             <div
-                class="group bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-3xl overflow-hidden hover:border-primary/30 transition-all duration-500 shadow-sm hover:shadow-2xl">
+                class="reveal-right delay-200 group bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-3xl overflow-hidden hover:border-primary/30 transition-all duration-500 shadow-sm hover:shadow-2xl">
                 <div class="flex flex-col h-full">
                     <div class="h-64 bg-slate-100 dark:bg-slate-800 relative overflow-hidden">
                         <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
@@ -307,7 +390,7 @@
 
 
             <div
-                class="group bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-3xl overflow-hidden hover:border-primary/30 transition-all duration-500 shadow-sm hover:shadow-2xl">
+                class="reveal-scale delay-300 group bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-3xl overflow-hidden hover:border-primary/30 transition-all duration-500 shadow-sm hover:shadow-2xl">
                 <div class="flex flex-col h-full">
                     <div class="h-64 bg-slate-100 dark:bg-slate-800 relative overflow-hidden">
                         <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
@@ -339,17 +422,41 @@
                     </div>
                 </div>
             </div>
+
+            <div
+                class="reveal delay-400 group bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-3xl overflow-hidden hover:border-primary/30 transition-all duration-500 shadow-sm hover:shadow-2xl">
+                <div class="flex flex-col h-full">
+                    <div class="h-64 bg-slate-100 dark:bg-slate-800 relative overflow-hidden">
+                        <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                            src="public/image%20copy%203.png" />
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+                        <div class="absolute bottom-6 left-8">
+                            <span
+                                class="bg-primary text-white text-[10px] font-bold uppercase tracking-[0.2em] px-3 py-1.5 rounded-full mb-3 inline-block">Gestión
+                                de Negocios</span>
+                            <h3 class="text-3xl font-bold text-white">Gestor de negocio</h3>
+                        </div>
+                    </div>
+                    <div class="p-8 flex-1 flex flex-col">
+                        <p class="text-slate-600 dark:text-slate-400 text-base leading-relaxed mb-8">
+                            Realicé un gestor de negocio para una empresa regional. Integré un panel de control para la
+                            gestión de clientes, productos, pedidos y envíos. Ademas integramos un panel de estadisticas
+                            para la toma de decisiones.
+                        </p>
+                    </div>
+                </div>
+            </div>
         </div>
     </main>
     <section class="bg-slate-50 dark:bg-slate-900/50 py-24 border-y border-slate-200 dark:border-slate-800"
         id="process">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16">
+            <div class="reveal text-center mb-16">
                 <h2 class="text-4xl font-black mb-4">Un compromiso personal con tu éxito</h2>
                 <p class="text-lg text-slate-500">Trabajo como tu partner tecnológico, no como un simple proveedor.</p>
             </div>
             <div class="grid grid-cols-1 md:grid-cols-3 gap-12 text-center md:text-left">
-                <div class="space-y-4">
+                <div class="reveal delay-100 space-y-4">
                     <div class="w-14 h-14 bg-primary/10 rounded-2xl flex items-center justify-center mx-auto md:mx-0">
                         <span class="material-symbols-outlined text-primary text-3xl">handshake</span>
                     </div>
@@ -357,7 +464,7 @@
                     <p class="text-slate-500 text-sm leading-relaxed">Sin intermediarios. Trabajás directamente conmigo
                         para asegurar que tu visión se traduzca perfectamente en código.</p>
                 </div>
-                <div class="space-y-4">
+                <div class="reveal delay-200 space-y-4">
                     <div class="w-14 h-14 bg-primary/10 rounded-2xl flex items-center justify-center mx-auto md:mx-0">
                         <span class="material-symbols-outlined text-primary text-3xl">query_stats</span>
                     </div>
@@ -365,7 +472,7 @@
                     <p class="text-slate-500 text-sm leading-relaxed">Priorizo el ROI y la eficiencia operativa. No solo
                         construyo funcionalidades; diseño herramientas que te ayudan a ahorrar tiempo y dinero.</p>
                 </div>
-                <div class="space-y-4">
+                <div class="reveal delay-300 space-y-4">
                     <div class="w-14 h-14 bg-primary/10 rounded-2xl flex items-center justify-center mx-auto md:mx-0">
                         <span class="material-symbols-outlined text-primary text-3xl">verified</span>
                     </div>
@@ -383,7 +490,7 @@
     <section id="about" class="py-24 bg-white dark:bg-background-dark border-t border-slate-100 dark:border-slate-800">
         <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
 
-            <div class="text-center mb-16">
+            <div class="reveal text-center mb-16">
                 <h2 class="text-4xl font-black mb-4">Sobre mí</h2>
                 <p class="text-lg text-slate-500 dark:text-slate-400">
                     Más que código, construyo soluciones que generan impacto real.
@@ -393,7 +500,7 @@
             <div class="grid md:grid-cols-2 gap-12 items-center">
 
                 <!-- Texto -->
-                <div class="space-y-6 text-slate-600 dark:text-slate-400 leading-relaxed">
+                <div class="reveal-left space-y-6 text-slate-600 dark:text-slate-400 leading-relaxed">
 
                     <p>
                         Soy <strong class="text-slate-900 dark:text-white">Nicolas Caliari</strong>, desarrollador
@@ -431,7 +538,7 @@
 
                 <!-- Card destacada -->
                 <div
-                    class="bg-slate-50 dark:bg-slate-900 p-8 rounded-3xl border border-slate-100 dark:border-slate-800 shadow-sm">
+                    class="reveal-right delay-200 bg-slate-50 dark:bg-slate-900 p-8 rounded-3xl border border-slate-100 dark:border-slate-800 shadow-sm">
                     <h3 class="text-xl font-bold mb-6">Especialidades</h3>
 
                     <ul class="space-y-4 text-sm text-slate-600 dark:text-slate-400">
@@ -449,7 +556,7 @@
 
     <footer class="bg-white dark:bg-background-dark py-16 border-t border-slate-100 dark:border-slate-800">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex flex-col md:flex-row justify-between items-center gap-12">
+            <div class="reveal flex flex-col md:flex-row justify-between items-center gap-12">
                 <div class="text-center md:text-left">
                     <div class="flex items-center justify-center md:justify-start gap-3 mb-6">
                         <div class="w-8 h-8 bg-primary rounded-full flex items-center justify-center">
@@ -483,6 +590,24 @@
             </div>
         </div>
     </footer>
+
+    <script>
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, {
+            threshold: 0.15,
+            rootMargin: '0px 0px -50px 0px'
+        });
+
+        document.querySelectorAll('.reveal, .reveal-left, .reveal-right, .reveal-scale').forEach(el => {
+            observer.observe(el);
+        });
+    </script>
 
 </body>
 
