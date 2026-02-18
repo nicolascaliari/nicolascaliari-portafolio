@@ -426,11 +426,29 @@
             <div
                 class="reveal delay-400 group bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-3xl overflow-hidden hover:border-primary/30 transition-all duration-500 shadow-sm hover:shadow-2xl">
                 <div class="flex flex-col h-full">
-                    <div class="h-64 bg-slate-100 dark:bg-slate-800 relative overflow-hidden">
-                        <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
-                            src="public/image%20copy%203.png" />
-                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
-                        <div class="absolute bottom-6 left-8">
+                    <div class="h-64 bg-slate-100 dark:bg-slate-800 relative overflow-hidden" id="carousel">
+                        <div class="carousel-track flex h-full transition-transform duration-500 ease-in-out">
+                            <img class="w-full h-full object-cover flex-shrink-0" src="public/image%20copy%203.png" />
+                            <img class="w-full h-full object-cover flex-shrink-0" src="public/image%20copy%204.png" />
+                            <img class="w-full h-full object-cover flex-shrink-0" src="public/image%20copy%205.png" />
+                            <img class="w-full h-full object-cover flex-shrink-0" src="public/image%20copy%206.png" />
+                        </div>
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent pointer-events-none"></div>
+                        <button onclick="moveCarousel(-1)"
+                            class="absolute left-3 top-1/2 -translate-y-1/2 w-9 h-9 bg-white/80 dark:bg-slate-800/80 backdrop-blur-sm rounded-full flex items-center justify-center hover:bg-white transition-all shadow-lg z-10">
+                            <span class="material-symbols-outlined text-slate-700 dark:text-white text-lg">chevron_left</span>
+                        </button>
+                        <button onclick="moveCarousel(1)"
+                            class="absolute right-3 top-1/2 -translate-y-1/2 w-9 h-9 bg-white/80 dark:bg-slate-800/80 backdrop-blur-sm rounded-full flex items-center justify-center hover:bg-white transition-all shadow-lg z-10">
+                            <span class="material-symbols-outlined text-slate-700 dark:text-white text-lg">chevron_right</span>
+                        </button>
+                        <div class="absolute bottom-16 left-1/2 -translate-x-1/2 flex gap-2 z-10" id="carousel-dots">
+                            <button class="w-2 h-2 rounded-full bg-white transition-all"></button>
+                            <button class="w-2 h-2 rounded-full bg-white/40 transition-all"></button>
+                            <button class="w-2 h-2 rounded-full bg-white/40 transition-all"></button>
+                            <button class="w-2 h-2 rounded-full bg-white/40 transition-all"></button>
+                        </div>
+                        <div class="absolute bottom-6 left-8 z-10">
                             <span
                                 class="bg-primary text-white text-[10px] font-bold uppercase tracking-[0.2em] px-3 py-1.5 rounded-full mb-3 inline-block">Gestión
                                 de Negocios</span>
@@ -606,6 +624,27 @@
 
         document.querySelectorAll('.reveal, .reveal-left, .reveal-right, .reveal-scale').forEach(el => {
             observer.observe(el);
+        });
+
+        // Carousel
+        let carouselIndex = 0;
+        const totalSlides = 4;
+        function moveCarousel(dir) {
+            carouselIndex = (carouselIndex + dir + totalSlides) % totalSlides;
+            updateCarousel();
+        }
+        function updateCarousel() {
+            const track = document.querySelector('.carousel-track');
+            track.style.transform = `translateX(-${carouselIndex * 100}%)`;
+            const dots = document.querySelectorAll('#carousel-dots button');
+            dots.forEach((dot, i) => {
+                dot.className = i === carouselIndex
+                    ? 'w-2 h-2 rounded-full bg-white transition-all scale-125'
+                    : 'w-2 h-2 rounded-full bg-white/40 transition-all';
+            });
+        }
+        document.querySelectorAll('#carousel-dots button').forEach((dot, i) => {
+            dot.addEventListener('click', () => { carouselIndex = i; updateCarousel(); });
         });
     </script>
 
