@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8" />
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-    <title>Nicolas Caliari | Desarrollador Web</title>
+    <title>CaliariTech | Partner Tecnológico para Startups</title>
     <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
     <link
         href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap"
@@ -19,9 +19,9 @@
             theme: {
                 extend: {
                     colors: {
-                        "primary": "#ec1337",
+                        "primary": "#2563eb",
                         "background-light": "#fcfcfc",
-                        "background-dark": "#1a0b0d",
+                        "background-dark": "#0d1117",
                         "slate-custom": "#475569",
                     },
                     fontFamily: {
@@ -43,7 +43,7 @@
         body { font-family: 'Inter', sans-serif; }
         .hero-pattern {
             background-color: #fcfcfc;
-            background-image: radial-gradient(#ec1337 0.5px, transparent 0.5px);
+            background-image: radial-gradient(#2563eb 0.5px, transparent 0.5px);
             background-size: 32px 32px;
             opacity: 1;
         }
@@ -51,10 +51,9 @@
             font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
         }
         .avatar-glow {
-            box-shadow: 0 0 40px -10px rgba(236, 19, 55, 0.3);
+            box-shadow: 0 0 40px -10px rgba(37, 99, 235, 0.3);
         }
 
-        /* Scroll reveal animations */
         @keyframes fadeInUp {
             from { opacity: 0; transform: translateY(40px); }
             to { opacity: 1; transform: translateY(0); }
@@ -113,7 +112,6 @@
             transform: scale(1);
         }
 
-        /* Hero load animations */
         .hero-animate {
             animation: fadeInUp 1s cubic-bezier(0.16, 1, 0.3, 1) forwards;
             opacity: 0;
@@ -131,7 +129,6 @@
             animation: slideDown 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
         }
 
-        /* Stagger delays for scroll reveals */
         .delay-100 { transition-delay: 0.1s; }
         .delay-200 { transition-delay: 0.2s; }
         .delay-300 { transition-delay: 0.3s; }
@@ -141,6 +138,8 @@
 
 <body
     class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 font-display transition-colors duration-300">
+
+    <!-- NAV -->
     <nav
         class="nav-animate sticky top-0 z-50 bg-white/90 dark:bg-background-dark/90 backdrop-blur-md border-b border-slate-100 dark:border-slate-800">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -148,64 +147,80 @@
                 <div class="flex items-center gap-3">
                     <div
                         class="w-10 h-10 bg-primary rounded-full flex items-center justify-center shadow-lg shadow-primary/20">
-                        <span class="text-white font-black text-lg">NC</span>
+                        <span class="text-white font-black text-lg">CT</span>
                     </div>
-                    <span class="font-extrabold text-xl tracking-tight">nicolas<span
-                            class="text-primary">caliari</span></span>
+                    <span class="font-extrabold text-xl tracking-tight">Caliari<span
+                            class="text-primary">Tech</span></span>
                 </div>
                 <div class="hidden md:flex items-center space-x-10">
                     <a class="text-sm font-semibold text-slate-600 dark:text-slate-300 hover:text-primary transition-colors"
-                        href="#solutions">Proyectos</a>
+                        href="#solutions">Casos Reales</a>
                     <a class="text-sm font-semibold text-slate-600 dark:text-slate-300 hover:text-primary transition-colors"
-                        href="#process">Mi Enfoque</a>
+                        href="#process">Nuestro Enfoque</a>
                     <a class="text-sm font-semibold text-slate-600 dark:text-slate-300 hover:text-primary transition-colors"
-                        href="#about">Sobre Mí</a>
+                        href="#about">Sobre Nosotros</a>
                     <a class="bg-primary text-white px-6 py-3 rounded-xl text-sm font-bold hover:bg-primary/90 transition-all shadow-lg shadow-primary/20 flex items-center gap-2"
-                        href="#about">
-                        Hablemos
+                        href="https://wa.me/36705433645?text=Hola,%20vi%20su%20web%20y%20quiero%20agendar%20una%20llamada%20estrat%C3%A9gica." target="_blank">
+                        Agendar llamada estratégica
                     </a>
                 </div>
             </div>
         </div>
     </nav>
+
+    <!-- HERO -->
     <header class="relative overflow-hidden py-20 lg:py-32 hero-pattern">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <div class="flex flex-col lg:flex-row items-center gap-16">
                 <div class="flex-1 text-center lg:text-left">
                     <h1 class="hero-animate text-5xl lg:text-7xl font-black text-slate-900 dark:text-white leading-tight mb-8">
-                        Ayudo a tu <span
-                            class="text-primary text-transparent bg-clip-text bg-gradient-to-r from-primary to-red-400">empresa
-                            a crecer</span> con soluciones web a medida.
+                        Construimos tecnología que ayuda a startups a <span
+                            class="text-primary text-transparent bg-clip-text bg-gradient-to-r from-primary to-blue-400">crecer, escalar y facturar más.</span>
                     </h1>
                     <p
-                        class="hero-animate hero-animate-delay-1 text-xl text-slate-600 dark:text-slate-400 mb-10 max-w-2xl leading-relaxed mx-auto lg:mx-0">
-                        Soy Nicolas Caliari, desarrollador especializado en ayudar a empresas a transformar desafíos
-                        complejos en herramientas digitales eficientes que impulsan el crecimiento.
+                        class="hero-animate hero-animate-delay-1 text-xl text-slate-600 dark:text-slate-400 mb-4 max-w-2xl leading-relaxed mx-auto lg:mx-0">
+                        Transformamos ideas y procesos complejos en sistemas digitales simples, eficientes y listos para escalar.
+                    </p>
+                    <p class="hero-animate hero-animate-delay-1 text-lg text-slate-500 dark:text-slate-500 mb-10 max-w-2xl leading-relaxed mx-auto lg:mx-0">
+                        No solo desarrollamos software: diseñamos herramientas que impulsan tu crecimiento.
                     </p>
                     <div class="hero-animate hero-animate-delay-2 flex flex-wrap gap-4 justify-center lg:justify-start">
                         <a href="#solutions"
                             class="bg-primary text-white px-8 py-4 rounded-xl font-bold hover:shadow-xl hover:shadow-primary/30 transition-all flex items-center gap-2">
-                            Ver mis Proyectos
+                            Ver casos reales
                             <span class="material-symbols-outlined text-sm">arrow_downward</span>
                         </a>
-                        <a href="https://wa.me/36705433645?text=Hola%20Nicolas,%20vi%20tu%20web%20y%20me%20gustaria%20agendar%20una%20llamada%20para%20hablar%20de%20mi%20proyecto."
+                        <a href="https://wa.me/36705433645?text=Hola,%20vi%20su%20web%20y%20me%20gustar%C3%ADa%20agendar%20una%20llamada%20estrat%C3%A9gica%20para%20hablar%20de%20mi%20proyecto."
                             target="_blank"
                             class="bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 px-8 py-4 rounded-xl font-bold text-slate-700 dark:text-slate-200 hover:bg-slate-50 transition-all inline-block">
-                            Agendar una charla
+                            Agendar una llamada estratégica
                         </a>
                     </div>
                 </div>
                 <div class="flex-1 relative">
-                    <div class="hero-photo relative w-72 h-72 lg:w-96 lg:h-96 mx-auto">
-                        <div class="absolute inset-0 bg-primary/10 rounded-3xl rotate-6"></div>
-                        <div
-                            class="absolute inset-0 bg-white dark:bg-slate-800 border-2 border-slate-100 dark:border-slate-700 rounded-3xl -rotate-3 transition-transform hover:rotate-0 duration-500 overflow-hidden avatar-glow">
-                            <img alt="Nicolas Caliari - Consultor de Desarrollo de Software"
-                                class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700"
-                                src="./public/foto.png" />
-                            <div
-                                class="absolute bottom-0 inset-x-0 p-4 bg-gradient-to-t from-slate-900/80 to-transparent">
-                                <p class="text-white text-xs font-bold uppercase tracking-widest">Software Developer</p>
+                    <div class="hero-photo flex gap-4 justify-center items-end">
+                        <!-- Foto 1 - Nicolas -->
+                        <div class="relative w-44 h-56 lg:w-56 lg:h-72">
+                            <div class="absolute inset-0 bg-primary/10 rounded-3xl rotate-3"></div>
+                            <div class="absolute inset-0 bg-white dark:bg-slate-800 border-2 border-slate-100 dark:border-slate-700 rounded-3xl -rotate-2 transition-transform hover:rotate-0 duration-500 overflow-hidden avatar-glow">
+                                <img alt="Nicolas Caliari - CaliariTech"
+                                    class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700"
+                                    src="./public/foto.png" />
+                                <div class="absolute bottom-0 inset-x-0 p-3 bg-gradient-to-t from-slate-900/80 to-transparent">
+                                    <p class="text-white text-[10px] font-bold uppercase tracking-widest">Nicolas Caliari</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Foto 2 - Compañero -->
+                        <div class="relative w-44 h-56 lg:w-56 lg:h-72 translate-y-4">
+                            <div class="absolute inset-0 bg-primary/10 rounded-3xl -rotate-3"></div>
+                            <div class="absolute inset-0 bg-white dark:bg-slate-800 border-2 border-slate-100 dark:border-slate-700 rounded-3xl rotate-2 transition-transform hover:rotate-0 duration-500 overflow-hidden avatar-glow">
+                                <img alt="Co-founder - CaliariTech"
+                                    class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700"
+                                    src="./public/foto.png" />
+                                <div class="absolute bottom-0 inset-x-0 p-3 bg-gradient-to-t from-slate-900/80 to-transparent">
+                                    <p class="text-white text-[10px] font-bold uppercase tracking-widest">Co-Founder</p>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -214,73 +229,69 @@
         </div>
     </header>
 
-
-
-
-
+    <!-- SERVICIOS -->
     <section id="services"
         class="py-24 bg-white dark:bg-background-dark border-b border-slate-100 dark:border-slate-800">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
             <div class="reveal text-center mb-20">
-                <h2 class="text-4xl font-black mb-4">Servicios</h2>
+                <h2 class="text-4xl font-black mb-4">Tecnología diseñada para escalar tu negocio</h2>
                 <p class="text-lg text-slate-500 dark:text-slate-400 max-w-2xl mx-auto">
-                    Desarrollo soluciones digitales adaptadas a las necesidades reales de cada negocio.
-                    Desde aplicaciones web hasta software de escritorio y móvil.
+                    Creamos sistemas digitales que optimizan procesos, automatizan operaciones y acompañan el crecimiento de startups en etapa temprana y en expansión.
                 </p>
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
 
-                <!-- Aplicaciones Web -->
+                <!-- Plataformas Web -->
                 <div
                     class="reveal delay-100 bg-slate-50 dark:bg-slate-900 p-8 rounded-3xl border border-slate-100 dark:border-slate-800 hover:shadow-xl transition-all">
                     <div class="w-14 h-14 bg-primary/10 rounded-2xl flex items-center justify-center mb-6">
                         <span class="material-symbols-outlined text-primary text-3xl">language</span>
                     </div>
-                    <h3 class="text-xl font-bold mb-4">Aplicaciones Web</h3>
+                    <h3 class="text-xl font-bold mb-4">Plataformas Web Escalables</h3>
                     <p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed">
-                        Desarrollo sistemas web a medida: paneles administrativos, e-commerce,
-                        sistemas de gestión y plataformas personalizadas listas para escalar.
+                        Construimos sistemas web, paneles administrativos y e-commerce pensados para crecer contigo.
+                        Arquitecturas sólidas que soportan más usuarios, más ventas y más operaciones sin colapsar.
                     </p>
                 </div>
 
-                <!-- Aplicaciones Móviles -->
+                <!-- Apps Móviles -->
                 <div
                     class="reveal delay-200 bg-slate-50 dark:bg-slate-900 p-8 rounded-3xl border border-slate-100 dark:border-slate-800 hover:shadow-xl transition-all">
                     <div class="w-14 h-14 bg-primary/10 rounded-2xl flex items-center justify-center mb-6">
                         <span class="material-symbols-outlined text-primary text-3xl">smartphone</span>
                     </div>
-                    <h3 class="text-xl font-bold mb-4">Aplicaciones Móviles</h3>
+                    <h3 class="text-xl font-bold mb-4">Aplicaciones Móviles que generan tracción</h3>
                     <p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed">
-                        Creación de apps para Android y iOS enfocadas en experiencia de usuario,
-                        integradas con sistemas web y pensadas para potenciar tu negocio.
+                        Desarrollamos apps para iOS y Android enfocadas en experiencia de usuario, retención y conversión.
+                        Integradas con tu backend y alineadas a tu modelo de negocio.
                     </p>
                 </div>
 
-                <!-- Software de Escritorio -->
+                <!-- Sistemas Internos -->
                 <div
                     class="reveal delay-300 bg-slate-50 dark:bg-slate-900 p-8 rounded-3xl border border-slate-100 dark:border-slate-800 hover:shadow-xl transition-all">
                     <div class="w-14 h-14 bg-primary/10 rounded-2xl flex items-center justify-center mb-6">
                         <span class="material-symbols-outlined text-primary text-3xl">desktop_windows</span>
                     </div>
-                    <h3 class="text-xl font-bold mb-4">Software de Escritorio</h3>
+                    <h3 class="text-xl font-bold mb-4">Sistemas Internos de Alto Rendimiento</h3>
                     <p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed">
-                        Sistemas administrativos y herramientas internas que funcionan
-                        incluso sin conexión constante a internet, ideales para empresas y comercios.
+                        Reemplazamos procesos manuales por herramientas internas que reducen errores, ahorran tiempo
+                        y mejoran la toma de decisiones en toda tu organización.
                     </p>
                 </div>
 
-                <!-- Sistemas a Medida -->
+                <!-- Automatización -->
                 <div
                     class="reveal delay-400 bg-slate-50 dark:bg-slate-900 p-8 rounded-3xl border border-slate-100 dark:border-slate-800 hover:shadow-xl transition-all">
                     <div class="w-14 h-14 bg-primary/10 rounded-2xl flex items-center justify-center mb-6">
                         <span class="material-symbols-outlined text-primary text-3xl">build</span>
                     </div>
-                    <h3 class="text-xl font-bold mb-4">Sistemas a Medida</h3>
+                    <h3 class="text-xl font-bold mb-4">Automatización y Digitalización Inteligente</h3>
                     <p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed">
-                        Digitalización de procesos, automatización de tareas y desarrollo de soluciones
-                        personalizadas que reemplazan planillas manuales por sistemas eficientes.
+                        Eliminamos planillas, tareas repetitivas y cuellos de botella mediante sistemas a medida
+                        que optimizan tus recursos y aumentan tu eficiencia operativa.
                     </p>
                 </div>
 
@@ -288,31 +299,17 @@
         </div>
     </section>
 
-
-
-
+    <!-- CASOS REALES -->
     <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24" id="solutions">
         <div class="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
             <div class="reveal max-w-2xl">
-                <h2 class="text-4xl font-black mb-4">Resultados que impulsan tu negocio</h2>
-                <p class="text-lg text-slate-500 dark:text-slate-400">Resultados reales aplicados a retail, finanzas y
-                    sectores empresariales.</p>
-            </div>
-            <div class="flex gap-2 bg-slate-100 dark:bg-slate-800 p-1.5 rounded-xl">
-                <button
-                    class="px-5 py-2.5 rounded-lg bg-white dark:bg-slate-700 shadow-sm text-sm font-bold text-slate-900 dark:text-white">Todo</button>
-                <button
-                    class="px-5 py-2.5 rounded-lg text-sm font-bold text-slate-500 hover:text-primary transition-colors">E-commerce</button>
-                <button
-                    class="px-5 py-2.5 rounded-lg text-sm font-bold text-slate-500 hover:text-primary transition-colors">Gestión</button>
-                <button
-                    class="px-5 py-2.5 rounded-lg text-sm font-bold text-slate-500 hover:text-primary transition-colors">Corporativo</button>
+                <h2 class="text-4xl font-black mb-4">Casos reales. Impacto real.</h2>
+                <p class="text-lg text-slate-500 dark:text-slate-400">Proyectos que optimizaron ventas, automatizaron operaciones y mejoraron la gestión interna.</p>
             </div>
         </div>
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-10">
 
-
-
+            <!-- Barfer -->
             <div
                 class="reveal-left group bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-3xl overflow-hidden hover:border-primary/30 transition-all duration-500 shadow-sm hover:shadow-2xl">
                 <div class="flex flex-col h-full">
@@ -322,22 +319,20 @@
                         <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
                         <div class="absolute bottom-6 left-8">
                             <span
-                                class="bg-primary text-white text-[10px] font-bold uppercase tracking-[0.2em] px-3 py-1.5 rounded-full mb-3 inline-block">Barfer
-                                alimentos</span>
-                            <h3 class="text-3xl font-bold text-white">e-commerce barfer</h3>
+                                class="bg-primary text-white text-[10px] font-bold uppercase tracking-[0.2em] px-3 py-1.5 rounded-full mb-3 inline-block">Barfer Alimentos</span>
+                            <h3 class="text-3xl font-bold text-white">E-commerce + Gestión Integral</h3>
                         </div>
                     </div>
                     <div class="p-8 flex-1 flex flex-col">
                         <p class="text-slate-600 dark:text-slate-400 text-base leading-relaxed mb-8">
-                            Ayudé a una empresa regional a crear su e-commerce de alimentos. Integré un gestor de
-                            pedidos y envíos para optimizar su proceso de ventas.
-
+                            Diseñamos e implementamos un e-commerce completo con sistema integrado de pedidos y envíos,
+                            reduciendo fricción operativa y mejorando la experiencia de compra.
                         </p>
                         <div
                             class="mt-auto pt-6 border-t border-slate-100 dark:border-slate-800 flex items-center justify-between">
                             <a href="https://www.barferalimento.com/" target="_blank"
-                                class="text-primary hover:text-red-700 font-bold flex items-center gap-2 group/btn">
-                                Ver Detalles
+                                class="text-primary hover:text-blue-800 font-bold flex items-center gap-2 group/btn">
+                                Ver caso
                                 <span
                                     class="material-symbols-outlined text-lg transition-transform group-hover/btn:translate-x-1">
                                     arrow_forward
@@ -348,9 +343,7 @@
                 </div>
             </div>
 
-
-
-
+            <!-- Raw & Fun -->
             <div
                 class="reveal-right delay-200 group bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-3xl overflow-hidden hover:border-primary/30 transition-all duration-500 shadow-sm hover:shadow-2xl">
                 <div class="flex flex-col h-full">
@@ -360,21 +353,20 @@
                         <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
                         <div class="absolute bottom-6 left-8">
                             <span
-                                class="bg-primary text-white text-[10px] font-bold uppercase tracking-[0.2em] px-3 py-1.5 rounded-full mb-3 inline-block">Raw
-                                & fun</span>
-                            <h3 class="text-3xl font-bold text-white">e-commerce y gestor raw</h3>
+                                class="bg-primary text-white text-[10px] font-bold uppercase tracking-[0.2em] px-3 py-1.5 rounded-full mb-3 inline-block">Raw & Fun</span>
+                            <h3 class="text-3xl font-bold text-white">Plataforma de Ventas y Administración</h3>
                         </div>
                     </div>
                     <div class="p-8 flex-1 flex flex-col">
                         <p class="text-slate-600 dark:text-slate-400 text-base leading-relaxed mb-8">
-                            Ayudé a una empresa regional a crear su e-commerce de alimentos. Integré un gestor de
-                            pedidos, clientes, productos y envíos para optimizar su proceso de ventas.
+                            Desarrollamos un ecosistema digital que integra ventas, gestión de clientes y control de productos
+                            en un solo sistema, permitiendo escalar operaciones con mayor eficiencia.
                         </p>
                         <div
                             class="mt-auto pt-6 border-t border-slate-100 dark:border-slate-800 flex items-center justify-between">
                             <a href="https://raw-app-orcin.vercel.app/es" target="_blank"
-                                class="text-primary hover:text-red-700 font-bold flex items-center gap-2 group/btn">
-                                Ver Detalles
+                                class="text-primary hover:text-blue-800 font-bold flex items-center gap-2 group/btn">
+                                Ver caso
                                 <span
                                     class="material-symbols-outlined text-lg transition-transform group-hover/btn:translate-x-1">
                                     arrow_forward
@@ -385,10 +377,7 @@
                 </div>
             </div>
 
-
-
-
-
+            <!-- Milena Makeup -->
             <div
                 class="reveal-scale delay-300 group bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-3xl overflow-hidden hover:border-primary/30 transition-all duration-500 shadow-sm hover:shadow-2xl">
                 <div class="flex flex-col h-full">
@@ -398,21 +387,20 @@
                         <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
                         <div class="absolute bottom-6 left-8">
                             <span
-                                class="bg-primary text-white text-[10px] font-bold uppercase tracking-[0.2em] px-3 py-1.5 rounded-full mb-3 inline-block">Milena
-                                makeup</span>
-                            <h3 class="text-3xl font-bold text-white">portfolio profesional</h3>
+                                class="bg-primary text-white text-[10px] font-bold uppercase tracking-[0.2em] px-3 py-1.5 rounded-full mb-3 inline-block">Milena Makeup</span>
+                            <h3 class="text-3xl font-bold text-white">Presencia Profesional Estratégica</h3>
                         </div>
                     </div>
                     <div class="p-8 flex-1 flex flex-col">
                         <p class="text-slate-600 dark:text-slate-400 text-base leading-relaxed mb-8">
-                            Ayudé a una profesional a crear su portfolio profesional. Mostré un diseño moderno y
-                            funcional para que pueda mostrar sus trabajos y contactar con sus clientes.
+                            Creamos una plataforma digital moderna que posiciona la marca, facilita el contacto
+                            con clientes y profesionaliza la presentación del servicio.
                         </p>
                         <div
                             class="mt-auto pt-6 border-t border-slate-100 dark:border-slate-800 flex items-center justify-between">
                             <a href="https://milu28.netlify.app/" target="_blank"
-                                class="text-primary hover:text-red-700 font-bold flex items-center gap-2 group/btn">
-                                Ver Detalles
+                                class="text-primary hover:text-blue-800 font-bold flex items-center gap-2 group/btn">
+                                Ver caso
                                 <span
                                     class="material-symbols-outlined text-lg transition-transform group-hover/btn:translate-x-1">
                                     arrow_forward
@@ -423,6 +411,7 @@
                 </div>
             </div>
 
+            <!-- Gestor de Negocio -->
             <div
                 class="reveal delay-400 group bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-3xl overflow-hidden hover:border-primary/30 transition-all duration-500 shadow-sm hover:shadow-2xl">
                 <div class="flex flex-col h-full">
@@ -450,68 +439,63 @@
                         </div>
                         <div class="absolute bottom-6 left-8 z-10">
                             <span
-                                class="bg-primary text-white text-[10px] font-bold uppercase tracking-[0.2em] px-3 py-1.5 rounded-full mb-3 inline-block">Gestión
-                                de Negocios</span>
-                            <h3 class="text-3xl font-bold text-white">Gestor de negocio</h3>
+                                class="bg-primary text-white text-[10px] font-bold uppercase tracking-[0.2em] px-3 py-1.5 rounded-full mb-3 inline-block">Sistema de Gestión</span>
+                            <h3 class="text-3xl font-bold text-white">Sistema de Gestión Empresarial</h3>
                         </div>
                     </div>
                     <div class="p-8 flex-1 flex flex-col">
                         <p class="text-slate-600 dark:text-slate-400 text-base leading-relaxed mb-8">
-                            Realicé un gestor de negocio para una empresa regional. Integré un panel de control para la
-                            gestión de clientes, productos, pedidos y envíos. Ademas integramos un panel de estadisticas
-                            para la toma de decisiones.
+                            Implementamos un sistema integral con panel de control y métricas clave que mejoran
+                            la toma de decisiones y optimizan la operación diaria de la empresa.
                         </p>
                     </div>
                 </div>
             </div>
         </div>
     </main>
+
+    <!-- COMPROMISO / PARTNER -->
     <section class="bg-slate-50 dark:bg-slate-900/50 py-24 border-y border-slate-200 dark:border-slate-800"
         id="process">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="reveal text-center mb-16">
-                <h2 class="text-4xl font-black mb-4">Un compromiso personal con tu éxito</h2>
-                <p class="text-lg text-slate-500">Trabajo como tu partner tecnológico, no como un simple proveedor.</p>
+                <h2 class="text-4xl font-black mb-4">No somos proveedores. Somos tu partner tecnológico.</h2>
+                <p class="text-lg text-slate-500">Trabajamos junto a founders y equipos como aliados estratégicos, alineando tecnología con objetivos de negocio.</p>
             </div>
             <div class="grid grid-cols-1 md:grid-cols-3 gap-12 text-center md:text-left">
                 <div class="reveal delay-100 space-y-4">
                     <div class="w-14 h-14 bg-primary/10 rounded-2xl flex items-center justify-center mx-auto md:mx-0">
                         <span class="material-symbols-outlined text-primary text-3xl">handshake</span>
                     </div>
-                    <h3 class="text-xl font-bold">Socio Directo</h3>
-                    <p class="text-slate-500 text-sm leading-relaxed">Sin intermediarios. Trabajás directamente conmigo
-                        para asegurar que tu visión se traduzca perfectamente en código.</p>
+                    <h3 class="text-xl font-bold">Contacto directo y visión compartida</h3>
+                    <p class="text-slate-500 text-sm leading-relaxed">Trabajás directamente con nosotros, sin intermediarios ni capas innecesarias. Entendemos tu visión y la convertimos en producto.</p>
                 </div>
                 <div class="reveal delay-200 space-y-4">
                     <div class="w-14 h-14 bg-primary/10 rounded-2xl flex items-center justify-center mx-auto md:mx-0">
                         <span class="material-symbols-outlined text-primary text-3xl">query_stats</span>
                     </div>
-                    <h3 class="text-xl font-bold">Enfoque Pro-Negocio</h3>
-                    <p class="text-slate-500 text-sm leading-relaxed">Priorizo el ROI y la eficiencia operativa. No solo
-                        construyo funcionalidades; diseño herramientas que te ayudan a ahorrar tiempo y dinero.</p>
+                    <h3 class="text-xl font-bold">Enfoque en crecimiento y rentabilidad</h3>
+                    <p class="text-slate-500 text-sm leading-relaxed">Cada decisión técnica tiene impacto en escalabilidad, eficiencia y retorno de inversión. Pensamos en tu negocio, no solo en el código.</p>
                 </div>
                 <div class="reveal delay-300 space-y-4">
                     <div class="w-14 h-14 bg-primary/10 rounded-2xl flex items-center justify-center mx-auto md:mx-0">
                         <span class="material-symbols-outlined text-primary text-3xl">verified</span>
                     </div>
-                    <h3 class="text-xl font-bold">Confiabilidad de por vida</h3>
-                    <p class="text-slate-500 text-sm leading-relaxed">Respaldo todo lo que construyo. Tendrás mi
-                        contacto directo para mantenimiento y soporte continuo mucho después del lanzamiento.</p>
+                    <h3 class="text-xl font-bold">Acompañamiento a largo plazo</h3>
+                    <p class="text-slate-500 text-sm leading-relaxed">No desaparecemos después del lanzamiento. Evolucionamos el sistema junto con tu startup a medida que crece y escala.</p>
                 </div>
             </div>
         </div>
     </section>
 
-
-
-
+    <!-- SOBRE NOSOTROS -->
     <section id="about" class="py-24 bg-white dark:bg-background-dark border-t border-slate-100 dark:border-slate-800">
         <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
 
             <div class="reveal text-center mb-16">
-                <h2 class="text-4xl font-black mb-4">Sobre mí</h2>
+                <h2 class="text-4xl font-black mb-4">Sobre Nosotros</h2>
                 <p class="text-lg text-slate-500 dark:text-slate-400">
-                    Más que código, construyo soluciones que generan impacto real.
+                    Más que código, construimos soluciones que generan impacto real.
                 </p>
             </div>
 
@@ -521,31 +505,23 @@
                 <div class="reveal-left space-y-6 text-slate-600 dark:text-slate-400 leading-relaxed">
 
                     <p>
-                        Soy <strong class="text-slate-900 dark:text-white">Nicolas Caliari</strong>, desarrollador
-                        backend y consultor tecnológico.
-                        Trabajo ayudando a empresas a optimizar procesos, automatizar operaciones y escalar sus
-                        productos digitales.
+                        Combinamos <strong class="text-slate-900 dark:text-white">experiencia técnica en desarrollo backend con visión comercial y estratégica.</strong>
+                        No solo escribimos código: analizamos el modelo de negocio y diseñamos sistemas que potencian crecimiento.
                     </p>
 
                     <p>
-                        Además, cuento con más de
-                        <strong class="text-slate-900 dark:text-white">2 años de experiencia profesional en empresas
-                            reales en relación de dependencia</strong>,
+                        Contamos con más de
+                        <strong class="text-slate-900 dark:text-white">2 años de experiencia profesional en empresas reales</strong>,
                         participando en el desarrollo y mantenimiento de sistemas productivos que impactan directamente
                         en operaciones diarias.
                     </p>
 
                     <p>
-                        Me especializo en arquitecturas modernas, APIs robustas y sistemas pensados para crecer.
-                        No solo escribo código: analizo el negocio y diseño soluciones que realmente aporten valor.
+                        Trabajamos con founders y equipos que buscan un socio técnico de confianza. Alguien que entienda el negocio, no solo la tecnología.
+                        Cada proyecto lo tomamos como si fuera propio.
                     </p>
 
-                    <p>
-                        Mi enfoque combina visión estratégica + ejecución técnica.
-                        Cada proyecto lo tomo como si fuera propio.
-                    </p>
-
-                    <a href="https://wa.me/36705433645?text=Hola%20Nicolas,%20quiero%20hablar%20sobre%20mi%20proyecto."
+                    <a href="https://wa.me/36705433645?text=Hola,%20quiero%20hablar%20sobre%20mi%20proyecto."
                         target="_blank" rel="noopener noreferrer"
                         class="inline-block mt-4 bg-primary text-white px-6 py-3 rounded-xl font-bold hover:shadow-lg transition-all">
                         Hablemos de tu proyecto
@@ -553,38 +529,42 @@
 
                 </div>
 
-
-                <!-- Card destacada -->
+                <!-- Card especialidades -->
                 <div
                     class="reveal-right delay-200 bg-slate-50 dark:bg-slate-900 p-8 rounded-3xl border border-slate-100 dark:border-slate-800 shadow-sm">
-                    <h3 class="text-xl font-bold mb-6">Especialidades</h3>
+                    <h3 class="text-xl font-bold mb-6">Nuestra experiencia técnica incluye:</h3>
 
                     <ul class="space-y-4 text-sm text-slate-600 dark:text-slate-400">
-                        <li>✔ Desarrollo Backend (Node.js, NestJS, NextJS, APIs REST, Microservicios)</li>
-                        <li>✔ Arquitectura escalable y optimización de sistemas</li>
+                        <li>✔ Arquitecturas backend robustas y escalables</li>
+                        <li>✔ Diseño de APIs y microservicios preparados para crecimiento</li>
                         <li>✔ Automatización de procesos empresariales</li>
-                        <li>✔ Integraciones con terceros</li>
-                        <li>✔ Consultoría tecnológica estratégica</li>
+                        <li>✔ Integraciones con herramientas y servicios externos</li>
+                        <li>✔ Consultoría estratégica para decisiones tecnológicas clave</li>
                     </ul>
+
+                    <div class="mt-6 pt-6 border-t border-slate-200 dark:border-slate-700">
+                        <p class="text-xs text-slate-400 font-semibold uppercase tracking-wider mb-3">Stack tecnológico</p>
+                        <p class="text-sm text-slate-500 dark:text-slate-400">Node.js · NestJS · Next.js · APIs REST · Microservicios · iOS & Android</p>
+                    </div>
                 </div>
 
             </div>
         </div>
     </section>
 
+    <!-- FOOTER -->
     <footer class="bg-white dark:bg-background-dark py-16 border-t border-slate-100 dark:border-slate-800">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="reveal flex flex-col md:flex-row justify-between items-center gap-12">
                 <div class="text-center md:text-left">
                     <div class="flex items-center justify-center md:justify-start gap-3 mb-6">
                         <div class="w-8 h-8 bg-primary rounded-full flex items-center justify-center">
-                            <span class="text-white font-black text-sm">NC</span>
+                            <span class="text-white font-black text-sm">CT</span>
                         </div>
-                        <span class="font-extrabold text-xl tracking-tight">nicolas<span
-                                class="text-primary">caliari</span></span>
+                        <span class="font-extrabold text-xl tracking-tight">Caliari<span
+                                class="text-primary">Tech</span></span>
                     </div>
-                    <p class="text-slate-500 dark:text-slate-400 max-w-sm">Creando herramientas web profesionales para
-                        empresas que valoran el trabajo experto y un servicio personalizado.</p>
+                    <p class="text-slate-500 dark:text-slate-400 max-w-sm">Construyendo tecnología estratégica para startups que quieren crecer sin límites.</p>
                 </div>
                 <div class="flex flex-col sm:flex-row items-center gap-8">
                     <div class="flex gap-8">
@@ -592,19 +572,18 @@
                             href="https://www.linkedin.com/in/nicolas-caliari-628236236/" target="_blank">LinkedIn</a>
                         <a class="text-slate-400 hover:text-primary transition-colors font-bold text-sm"
                             href="https://github.com/nicolascaliari" target="_blank">GitHub</a>
-
                         <a class="text-slate-400 hover:text-primary transition-colors font-bold text-sm"
-                            href="https://wa.me/36705433645?text=Hola%20Nicolas,%20quiero%20agendar%20una%20llamada%20para%20hablar%20de%20mi%20proyecto."
+                            href="https://wa.me/36705433645?text=Hola,%20quiero%20agendar%20una%20llamada%20estrat%C3%A9gica%20para%20hablar%20de%20mi%20proyecto."
                             target="_blank">Agendar Llamada</a>
                     </div>
-                    <button
-                        class="bg-slate-900 dark:bg-white text-white dark:text-slate-900 px-8 py-3 rounded-xl font-bold hover:scale-105 transition-all">Empezar
-                        un Proyecto</button>
+                    <a href="https://wa.me/36705433645?text=Hola,%20quiero%20empezar%20un%20proyecto."
+                        target="_blank"
+                        class="bg-slate-900 dark:bg-white text-white dark:text-slate-900 px-8 py-3 rounded-xl font-bold hover:scale-105 transition-all">Empezar un Proyecto</a>
                 </div>
             </div>
             <div
                 class="mt-16 pt-8 border-t border-slate-100 dark:border-slate-800 text-center text-xs text-slate-400 font-medium">
-                © 2025 Nicolas Caliari. Consultor Independiente &amp; Desarrollador de Software.
+                © 2025 CaliariTech. Partner Tecnológico &amp; Desarrollo de Software.
             </div>
         </div>
     </footer>
